@@ -1,0 +1,64 @@
+<div th:fragment="portfolioitem">
+    <div class="bg" id="view-bg"></div>
+    <div class="view-container">
+        <h1 class="header-font view-header" th:text="${item.name}"></h1>
+        <div>
+            <span th:each="tab : ${item.tags}" class="card-tag header-font" th:text="${tab}"></span>
+        </div>
+        <p class="view-text normal-font"><small>27.12.2022</small></p>
+        <p class="view-text normal-font">
+            <i class="view-text normal-font">
+                Catquiz is a traditional quiz about cats. Still available
+                <a target="_blank" href="https://catquiz-843f1.web.app/">here</a>.
+            </i>
+        </p>
+        <img class="view-image normal-font" th:src="${item.image}" alt="General screenshot from site">
+        <p class="view-text normal-font" ><i class="view-text normal-font">Image from the frontpage</i></p>
+        <!-- First Content section -->
+        <h2 class="header-font view-header">What is it?</h2>
+        <p class="view-text normal-font">
+            Catquiz was catsopinion.com blog's content quiz.
+            It was a funny addition to static written blog content and was actually quite informative.
+            The quiz can be played in Finnish or English.
+            If I can recall correctly, this was the first typescript project I did.
+            Quiz is filled with animation and is responsive.
+            I went for a detective theme and the small magnifying glass at the bottom was really fun to make.
+            What I regret the most is the fact that I'm not a very good writer and
+            questions contain writing errors and some brain farts.
+        </p>
+
+        <!-- Second Content section -->
+        <h2 class="header-font view-header">Goals and lifespan</h2>
+        <p class="view-text normal-font">
+            I did not have any specific goals for this in mind.
+            I just wanted to make a quiz about cats,
+            it seemed like a fun project to make.
+            At least I did get in touch with typescript and I liked it.
+            The quiz is still up and available to try.
+        </p>
+        <img class="view-image normal-font" src="/images/portfolio/catquiz/catquiz-gameplay.webp" alt="Gameplay screen shot">
+        <p class="view-text normal-font" ><i class="view-text normal-font">Image from the gameplay</i></p>
+
+        <!-- Third Content section -->
+        <h2 class="header-font view-header">Tech used</h2>
+        <p class="view-text normal-font">
+            Catquiz is a statically hosted single page application.
+            It is written in react. Data is stored in the Firebase realtime database and
+            the database was filled with python script that can be found <a target="_blank" href="https://github.com/linre-90/catquiz-db-fill">here</a>.
+            The script was written fast and needed only once, so it might not be pretty.
+            What I did was, I wrote questions in Excel type charts.
+            Exported those to csv and then added the data to the database.
+            Data was gathered all around the internet manually.
+            <br><br>
+            Catquiz site can be found at <a target="_blank" href="https://catquiz-843f1.web.app/">here</a>.
+            Catquiz code can be found at <a target="_blank" href="https://github.com/linre-90/catquiz">Github</a> repo.
+            Python script can be found at <a target="_blank" href="https://github.com/linre-90/catquiz-db-fill">Github</a> repo.
+        </p>
+        <img class="view-image normal-font" src="/images/portfolio/catquiz/catquiz-end.webp" alt="Gameplay ending screen that tells how well player performed">
+        <p class="view-text normal-font" >
+            <i class="view-text normal-font">
+                At the end player gets report with correct answers
+            </i>
+        </p>
+    </div>
+</div>

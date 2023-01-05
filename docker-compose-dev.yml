@@ -1,0 +1,17 @@
+# This file initializes empty dev database to use with application local development.
+version: "3.8"
+services:
+    db:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_PASSWORD: example
+            POSTGRES_USER: example
+            POSTGRES_DB: contacts
+        ports:
+            - "127.0.0.1:5432:5432"
+        volumes:
+            - db:/var/lib/postgresql/data
+volumes:
+    db:
+        driver: local

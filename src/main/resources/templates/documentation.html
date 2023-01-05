@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin panel</title>
+    <link rel="icon" href="/images/logo.webp" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="/admin.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+</head>
+<body class="bg-dark text-white">
+    <div class="container">
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/images/logo.webp" alt="Logo" width="30" height="30">
+                </a>
+            </div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="/admin">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" class="nav-link bg-dark border-0 text-danger" value="Sign Out"/>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+        <h1>Documentation</h1>
+        <p>
+            This documentation provides simple usage instructions for portfolio API. It can be connected from
+            external resources, like mobile app, with authentication. API is very limited and restricted only for
+            certain usages.
+        </p>
+        <i><h2>API Documentation</h2></i>
+        <p>BaseUrl: https://www.{some_domain_name}.{some_domain_extension}/contact/api/v1</p>
+        <ul>
+            <li><a href="#auth">Authentication</a></li>
+            <li><a href="#get">GET methods</a></li>
+            <li><a href="#delete">DELETE methods</a></li>
+            <li><a href="#update">UPDATE methods</a></li>
+        </ul>
+        <h5 id="auth" class="mt-5">Authentication</h5>
+        <p>
+            User authenticates to api using endpoint "BaseUrl"/login.
+            Provide valid username and password in request body.
+            Then User receives authorization cookie and session.
+        </p>
+        <h5 id="get" class="mt-5">GET endpoints</h5>
+        <p>BaseUrl request returns all contacts in json format.</p>
+        <p>BaseUrl/{id} request fetches single contact from server based on url or returns 404 if not found</p>
+        <h5 id="delete" class="mt-5">DELETE endpoints</h5>
+        <p>BaseUrl/{id} delete request removes parameter id corresponding entry from database.</p>
+        <h5 id="update" class="mt-5">UPDATE endpoints</h5>
+        <p>BaseUrl/{id} update request toggles contact read value to !contact read value.</p>
+
+        <i><h2>Admin documentation</h2></i>
+        <ul>
+            <li><a href="#access">Accessibility</a></li>
+            <li><a href="#functionality">Functionality</a></li>
+        </ul>
+        <h5 id="access" class="mt-5">Accessibility</h5>
+        <p>
+            All pages beyond /admin requires authentication with correct password and username.
+            User is provided login form in BaseUrl/login and after that cookies are set for admin usage.
+        </p>
+        <h5 id="functionality" class="mt-5">Functionality</h5>
+        <p>
+            Admin pages provide customized crud operations, ability ro read contacts and documentation for API usage.
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+# Production compose example/documentation file. PUT TO VERSION CONTROL!!!!!!!
+version: "3.8"
+services:
+    proxy:
+        image: nginx:alpine
+        restart: always
+        depends_on:
+            - spring
+            - db
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ./default.conf:/etc/nginx/conf.d/default.conf
+            - ./sitemap.xml:/var/www/portfolio/sitemap.xml
+            - ./robots.txt:/var/www/portfolio/robots.txt
+            # Ssl file mount configs
+            - <HOST_CRT_FILE_PATH>:<CONTAINER_CRT_FILE_PATH>
+            - <HOST_KEY_FILE_PATH>:<CONTAINER_KEY_FILE_PATH>
+        networks:
+            - portfolionet
+    spring:
+        image: portfolioapp
+        restart: always
+        environment:
+            PORTFOLIO_DATABASE: <DB connection string>
+            DATABASE_USER: <database user>
+            DATABASE_PASS: <database password>
+            SPRING_HIBERNATE_CONTROL: <update or none>
+            APP_USER: <app user username>
+            APP_USER_PASS: <app user password>
+        depends_on:
+            - db
+        networks:
+            - portfolionet
+    db:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_USER: <database user>
+            POSTGRES_PASSWORD: <database password>
+            POSTGRES_DB: <database>
+        volumes:
+            - proddb:/var/lib/postgresql/data
+        networks:
+            - portfolionet
+    adminer:
+        image: adminer
+        restart: always
+        networks:
+            - portfolionet
+networks:
+    portfolionet:
+        name: portfolionet
+
+volumes:
+    proddb:
+        driver: local

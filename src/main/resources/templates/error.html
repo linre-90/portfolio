@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>Something went wrong</title>
+    <link rel="icon" href="/images/logo.png" />
+    <meta name="description" content="Something went wrong"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Baumans&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+        body{
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: "Baumans", cursive;
+        }
+
+        a, p{
+            font-family: "Quicksand", sans-serif;
+            font-size: 1.25rem;
+        }
+
+        i{
+            font-size: 5rem;
+        }
+
+        .marginTop{
+            margin-top: 80px;
+        }
+
+        .red{
+            color: red;
+        }
+
+        .btn-ok{
+            border: 1px solid green;
+            background-color: rgba(0, 1, 0, .75);
+            color: green;
+            padding: 1.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            border-radius: .5rem;
+        }
+
+        .btn-no{
+            border: 1px solid red;
+            background-color: rgba(1, 0, 0, .75);
+            color: red;
+            padding: 1.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            border-radius: .5rem;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <i class="fa-solid fa-circle-exclamation marginTop red"></i>
+    <h1>Woooooops!!!</h1>
+    <p>This guy did not bother to create the page you were searching for!</p>
+    <i class="fa-solid fa-arrow-down"></i>
+    <div>
+        <img width="100px" height="100px" src="/images/cv1.webp" alt="Website maker">
+    </div>
+    <div class="marginTop">
+        <a class="btn-ok" href="/">Forgive</a>
+        <a class="btn-no" href="/">Salary -1%</a>
+    </div>
+
+
+</body>
+</html>

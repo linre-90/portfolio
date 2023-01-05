@@ -1,0 +1,13 @@
+# Builds image from application with Dockerfile.
+# The Spring boot application must first be build with mawen.
+# Command for command line build is "./mvnw package".
+#
+# !IMPORTANT update arg "JAR_FILE" value to be the correct version number.
+version: "3.8"
+services:
+    pfbuild:
+        build:
+            context: .
+            args:
+                JAR_FILE: portfolio-1.1.1.jar
+        image: portfolioapp

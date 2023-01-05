@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reader - Juho Lindemark</title>
+    <link href="/view.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" href="/images/logo.webp" />
+    <script src="/animation.js"></script>
+    <meta name="description" content="Specifically tailored viewer for different portfolio projects."/>
+</head>
+</head>
+<body>
+    <div th:replace="('fragments/portfolio/' + ${fragment}) :: portfolioitem"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+html{
+    background-color: #0729a4;
+}
+
+#view-bg{
+    background-image: url("/images/pawel-czerwinski-6lQDFGOB1iw-unsplash.webp");
+}
+
+.view-container{
+    width: 90%;
+    margin: auto;
+    margin-top: .5rem;
+    margin-bottom: 4rem;
+    background-color: var(--color-blue-opacity);
+    border-radius: 10px;
+    padding: 1rem;
+    backdrop-filter: blur(var(--frost-blur));
+}
+
+.view-image{
+    width:80%;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.view-text{
+    color:  #f8f8f8;
+    line-height: 1.5rem;
+}
+
+.view-header{
+    color: #b10bbe;
+}
+
+a{
+    color: #b10bbe;
+}
+
+video{
+    width: 100%;
+    height: auto;
+}

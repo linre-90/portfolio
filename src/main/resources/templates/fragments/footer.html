@@ -1,0 +1,93 @@
+<!--Footer section-->
+<footer th:fragment="footer">
+    <div id="link-sections">
+        <!-- Social media links -->
+        <div class="link-section">
+            <div>
+                <p><u>Social media</u></p>
+            </div>
+            <div id="social1" class="footerlink">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/juho-l-171a98233/" target="_blank">
+                    Linked in
+                </a>
+            </div>
+            <div id="social2" class="footerlink">
+                <i class="fa-brands fa-twitter"></i>
+                <a href="https://twitter.com/90_linre"  target="_blank">
+                    Twitter
+                </a>
+            </div>
+            <div id="social3" class="footerlink">
+                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/linre-90" target="_blank">
+                    Github
+                </a>
+            </div>
+            <div id="social4" class="footerlink">
+                <i class="fa-solid fa-at"></i>
+                <a href="mailto:jlportfolio@outlook.com">
+                    Email
+                </a>
+            </div>
+        </div>
+        <!-- Made with -->
+        <div class="link-section">
+            <div>
+                <p><u>Made with</u></p>
+            </div>
+            <div id="madewith4" class="footerlink">
+                <i class="fa-solid fa-font-awesome"></i>
+                <a href="https://fontawesome.com/" target="_blank">Fontawesome</a>
+            </div>
+            <div id="madewith1" class="footerlink">
+                <i class="fa-regular fa-file-code"></i>
+                <a href="https://spring.io/" target="_blank">Spring Boot</a>
+            </div>
+            <div id="madewith2" class="footerlink">
+                <i class="fa-brands fa-js"></i>
+                <a href="https://greensock.com/gsap/" target="_blank">Gsap</a>
+            </div>
+            <div id="madewith3" class="footerlink">
+                <i class="fa-solid fa-fire"></i>
+                <a href="https://www.linode.com/" target="_blank">Linode</a>
+            </div>
+        </div>
+        <!-- Sitemap -->
+        <div class="link-section">
+            <div>
+                <p><u>Sitemap</u></p>
+            </div>
+            <div id="sitemap3" class="footerlink">
+                <i class="fa-solid fa-folder-open"></i>
+                <a href="/portfolio">Portfolio</a>
+            </div>
+            <div id="sitemap4" class="footerlink">
+                <i class="fa-solid fa-address-book"></i>
+                <a href="/contact">Contact</a>
+            </div>
+            <div id="sitemap2" class="footerlink">
+                <i class="fa-solid fa-database "></i>
+                <a href="/about">About</a>
+            </div>
+            <div id="sitemap1" class="footerlink">
+                <i class="fa-solid fa-house"></i>
+                <a href="/">Home</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer-notice-section">
+        <img id="footerlogo" alt="Personal logo" class="ml-auto mr-auto" src="./images/logo.webp" width="80px" height="80px" />
+        <p><small>Copyright Juho Lindemark - 2023</small></p>
+    </div>
+
+    <script>
+        const footerLinks = document.getElementsByClassName("footerlink");
+        for (let i = 0; i < footerLinks.length; i++) {
+          const element = footerLinks[i];
+          element.addEventListener("mouseenter", () => scaleUpOrDown(element.id, true));
+          element.addEventListener("mouseleave", () => scaleUpOrDown(element.id, false));
+        }
+        slowConstantRotation("footerlogo");
+      </script>
+</footer>

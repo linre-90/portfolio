@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- Home/index page template -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header.html :: head}"></head>
+<body>
+    <!-- Navigation bar and background image-->
+    <header th:replace="~{fragments/navbar.html :: navbar}"></header>
+    <span th:replace="~{fragments/background.html :: background}"></span>
+
+    <!--Main content section-->
+    <main>
+        <h1 class="header-font huge-header align-text-to-end">Looking for your next software developer?</h1>
+        <h2 class="header-font medium-header">Look no more!</h2>
+        <p class="text-section">
+            Hello! My name is Juho, and I am a full stack developer from Finland! I have experience in large range of
+            technologies including Node, Php, Python, WordPress and front end frameworks like React and Vue. I have
+            deployed applications to Heroku, Google Firebase and AWS.
+        </p>
+        <p class="text-section">
+            I know Unity and I have some experience with Unreal Engine. My main focus is on programming, but I also try to
+            do some graphics with Blender and inkscape.
+        </p>
+        <div id="cta-container">
+            <a href="/portfolio" class="cta-button">
+                Portfolio is in here!
+            </a>
+        </div>
+        <script>
+                ctaAnimation("cta-container");
+        </script>
+    </main>
+    <footer th:replace="~{fragments/footer.html :: footer}"></footer>
+</body>
+</html>

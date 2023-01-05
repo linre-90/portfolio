@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Baumans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+:root {
+    --color-blue: #0729a4;
+    --color-blue-opacity: rgba(7, 41, 164, 0.75);
+    --color-pink: #b10bbe;
+    --color-pink-opacity: rgba(97, 7, 100, 0.75)/*rgba(177, 11, 190, 0.75)*/;
+    --color-yellow: #e2901b;
+    --color-red: rgb(97, 7, 100);
+    --color-brown: #7a2c2b;
+    --color-black: #000000;
+    --color-gray: #303030;
+    --color-white: #f8f8f8;
+    --frost-blur: 0.25rem;
+}
+
+.header-font {
+    font-family: "Baumans", cursive;
+}
+
+.normal-font {
+    font-family: "Quicksand", sans-serif;
+}
+
+html{
+    background-color: black;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100vh;
+    font-size: 100%;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    color: var(--color-pink);
+    font-weight: bold;
+}
+
+nav {
+    background-color: var(--color-pink-opacity);
+    width: 90%;
+    margin: auto;
+    box-shadow: 0px 5px 10px var(--color-yellow);
+    backdrop-filter: blur(var(--frost-blur));
+    border-radius: 0px 0px 10px 10px;
+}
+
+main {
+    width: 85%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: var(--color-blue-opacity);
+    border-radius: 10px;
+    padding: 1rem;
+    backdrop-filter: blur(var(--frost-blur));
+}
+
+footer {
+    margin-top: auto;
+    background-color: var(--color-pink-opacity);
+    backdrop-filter: blur(var(--frost-blur));
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+    box-shadow: 0 -10px 15px -3px #e2901b, 0 4px 6px -4px #e2901b;
+    font-weight: bold;
+}
+
+i {
+    color: var(--color-yellow);
+}
+
+footer a {
+    display: inline-block;
+    color: var(--color-yellow);
+    margin-top: 1.5rem;
+    width: max-content;
+}
+
+footer i {
+    margin-top: 1.5rem;
+}
+
+ul{
+    font-family: "Quicksand", sans-serif;
+
+}
+
+
+
+footer p {
+    color: var(--color-yellow);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+button{
+    color: var(--color-white);
+    font-family: "Quicksand", sans-serif;
+    margin-top: 2rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.form-container{
+    display: grid;
+    /*grid-template-columns: 50% 50%;*/
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
+.form-input{
+    display: block;
+    background-color: var(--color-pink-opacity);
+    color: var(--color-white);
+    font-family: "Quicksand", sans-serif;
+    min-height: 2rem;
+    font-size: .9rem;
+    border: 2px solid var(--color-pink);
+    border-radius: .25rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+textarea:focus, input:focus{
+    outline: var(--color-yellow);
+}
+
+form label{
+    font-family: "Quicksand", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.card-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-body{
+    padding: 1rem;
+    border: 1px solid var(--color-pink);
+    border-radius: .33rem;
+    margin-bottom: 2rem;
+}
+
+.card-header{
+    font-size: 1.5rem;
+    text-decoration: underline;
+
+}
+
+.card-image{
+    width: 80%;
+    height: auto;
+}
+
+.card-text{
+    font-family: "Quicksand", sans-serif;
+}
+
+.card-tag{
+    background-color: var(--color-yellow);
+    color: var(--color-red);
+    border-radius: .2rem;
+    font-size: .75rem;
+    padding: .2rem;
+    display: inline;
+    margin-right: .25rem;
+}
+
+.link-section {
+    width: 32%;
+    text-align: center;
+}
+
+.bg {
+    background-image: url("/images/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpg");
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top:0;
+    bottom:0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -10;
+}
+
+.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.animation0 {
+    display: none;
+}
+
+.huge-header {
+    font-size: 3.5rem;
+}
+
+.medium-header {
+    font-size: 2rem;
+}
+
+.align-text-to-end {
+    text-align: end;
+}
+
+.text-section {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.85rem;
+}
+
+.cta-button {
+    border: 2px solid var(--color-pink);
+    border-radius: 1rem;
+    background-color: var(--color-pink-opacity);
+    padding: 1rem;
+    display: block;
+    color: var(--color-white);
+}
+
+.card-link{
+    margin-top: 2rem;
+    width: 33%;
+}
+
+.error-text{
+    color: red;
+    padding: .5rem;
+    border: 2px solid red;
+    border-radius: .5rem;
+    font-weight: bold;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+#navbar .brand-container {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#navbar img {
+    width: 2rem;
+    height: 2rem;
+}
+
+#navbar a {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    color: var(--color-yellow);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#navbar a:visited {
+    color: var(--color-yellow);
+}
+
+#navbar a:active {
+    color: var(--color-yellow);
+}
+
+#navbarbtn {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 1rem;
+}
+
+#navbarbtn button {
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: var(--color-yellow);
+    background-color: rgba(0, 0, 0, 0);
+    width: fit-content;
+    border: 0px;
+    font-size: 1.25rem;
+}
+
+#navbarbtn button:hover {
+    cursor: pointer;
+}
+
+#cta-container {
+    width: fit-content;
+}
+
+#link-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-notice-section {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#submitBtn{
+    width: 80px;
+}
+
+@media only screen and (min-width: 850px) {
+
+    .card-container{
+        justify-content: space-around;
+    }
+
+    .card-body{
+        width: 320px;
+    }
+}
+
+@media only screen and (min-width: 940px) {
+        .form-container{
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .view-image{
+                width: 50%;
+        }
+}
+
+@media only screen and (min-width: 1200px) {
+    main{
+        width: 60%;
+    }
+
+    #navbar{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #navbarbtn button{
+        display: none;
+    }
+
+    #link-sections {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .view-container{
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    main{
+        width: 50%;
+    }
+
+    .form-container{
+            width: 55%;
+            margin-left: auto;
+            margin-right: auto;
+    }
+
+    #navbar{
+            width: 35%;
+    }
+
+    #link-sections{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+}

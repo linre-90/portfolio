@@ -1,0 +1,72 @@
+<div th:fragment="portfolioitem">
+    <div class="bg" id="view-bg"></div>
+    <div class="view-container">
+        <h1 class="header-font view-header" th:text="${item.name}"></h1>
+        <div>
+            <span th:each="tab : ${item.tags}" class="card-tag header-font" th:text="${tab}"></span>
+        </div>
+        <p class="view-text normal-font"><small>27.12.2022</small></p>
+        <p class="view-text normal-font">
+            <i class="view-text normal-font">
+                This was my and 3 other people's game-jam project. We did this in 4 days.
+                <a download href="/files/FootkinsHalloweenRevolution.zip">The game can be loaded from here!</a>
+            </i>
+        </p>
+        <img class="view-image normal-font" th:src="${item.image}" alt="Footkins Main menu">
+        <p class="view-text normal-font" >
+            <i class="view-text normal-font">
+                Footkins main menu
+            </i>
+        </p>
+        <div class="iframe-container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/AZPaT0EHMCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="view-text normal-font">
+            Music by <a target="_blank" href="https://pixabay.com/users/alexzavesa-24262182/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=10701">AleXZavesa</a> from <a target="_blank" href="https://pixabay.com/music//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=10701">Pixabay</a>
+        </p>
+        <!-- First Content section -->
+        <h2 class="header-font view-header">What is it?</h2>
+        <p class="view-text normal-font">
+            We participated in a game jam between colleges and the theme was Halloween.
+            Our idea was not to create any stereotypical pumpkin Halloween but instead make characters rebel against pumpkins.
+            The character has a football as his head. He discovered it works just as well as pumpkin.
+            The scrolling background is gorgeous and exciting. All background assets stay in place,
+            but it seems they are moving. What I also liked in the project was the mono color space
+            complemented with bright vfx and bright details.
+        </p>
+        <img class="view-image normal-font" src="/images/portfolio/footkin/art.webp" alt="art direction">
+        <p class="view-text normal-font" >
+            <i class="view-text normal-font">
+                Art direction was dark but not black.
+            </i>
+        </p>
+
+        <img class="view-image normal-font" src="/images/portfolio/footkin/lightDark.webp" alt="Bright effects">
+        <p class="view-text normal-font" >
+            <i class="view-text normal-font">
+                Even simple light looks beautiful in dark.
+            </i>
+        </p>
+
+        <!-- Second Content section -->
+        <h2 class="header-font view-header">Coding</h2>
+        <p class="view-text normal-font">
+            I mainly focused on the coding and general design.
+            The challenge was to make reusable, easily customizable parts.
+            All the characters share the same scripts and their behaviour is customized with scriptable objects.
+            Time to make the game was short, so we had to cut some corners and copy pasta a lot.
+        </p>
+        <img class="view-image normal-font" src="/images/portfolio/footkin/enemies.webp" alt="Enemy">
+        <p class="view-text normal-font" >
+            <i class="view-text normal-font">
+                Enemies and boss were essentially same thing just customized differently.
+            </i>
+        </p>
+        <img class="view-image normal-font" src="/images/portfolio/footkin/vfx.webp" alt="Example of vfx">
+        <p class="view-text normal-font" >
+            <i class="view-text normal-font">
+                Vfx effects are important in dark setting.
+            </i>
+        </p>
+    </div>
+</div>

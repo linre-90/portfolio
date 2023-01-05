@@ -1,0 +1,80 @@
+<div th:fragment="portfolioitem">
+    <div class="bg" id="view-bg"></div>
+    <div class="view-container">
+        <h1 class="header-font view-header" th:text="${item.name}"></h1>
+        <div>
+            <span th:each="tab : ${item.tags}" class="card-tag header-font" th:text="${tab}"></span>
+        </div>
+        <p class="view-text normal-font"><small>27.12.2022</small></p>
+        <p class="view-text normal-font">
+            <i class="view-text normal-font">
+                Goal of this project was to showcase strengths in HDRP rendering pipeline.
+            </i>
+        </p>
+        <img class="view-image normal-font" th:src="${item.image}" alt="Overview of the scene hallway">
+        <p class="view-text normal-font" >
+            <i class="view-text normal-font">
+                Small room connected to hallway
+            </i>
+        </p>
+        <div class="iframe-container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/iFBjlztOsMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <p class="view-text normal-font">
+        Music by <a target="_blank" href="https://pixabay.com/users/music_unlimited-27600023/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=124008">Music_Unlimited</a> from <a target="_blank" href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=124008">Pixabay</a>
+        </p>
+        <!-- First Content section -->
+        <h2 class="header-font view-header">What is it?</h2>
+        <p class="view-text normal-font">
+            This was a school assignment, and we were supposed to pick either URP or HDRP render pipeline and showcase its strength.
+            I am fairly familiar with URP and decided to try out HDRP and what I can achieve with it.
+            Scene uses a lot of shiny and transparent surfaces, so I decided to put ray tracing power to SSR reflection.
+            I also implemented DLSS with different profiles and scene ran with DirectX12.
+        </p>
+
+        <img class="view-image normal-font" src="/images/portfolio/raytracing/KEKW.webp" alt="Displaying chairs and materials">
+        <p class="view-text normal-font" >
+            <i class="view-text normal-font">
+                Every single item in the project is modeled and textured by me using Blender and AmbienCG/Unsplash as texture sources.
+            </i>
+        </p>
+
+        <!-- Second Content section -->
+        <h2 class="header-font view-header">The result</h2>
+        <p class="view-text normal-font">
+            I am very happy with the result. The scene looks great to my eyes, and it is pretty good
+            even with really heavy post-processing. The DX12 is really, really heavy compared to DX11.
+            My computer hovered somewhere around 30-40 FPS without DLSS.
+            DLSS features are toggleable at runtime so the difference can be seen instantly.
+            DLSS gives me about 20-30 fps boost with maximum quality.
+            Some profiles affect more and some have a negative impact on performance.
+        </p>
+        <img class="view-image normal-font" src="/images/portfolio/raytracing/window.webp" alt="Windows were made with transparent paintings">
+        <p class="view-text normal-font" >
+            <i class="view-text normal-font">
+                Windows were made with transparent paintings
+            </i>
+        </p>
+
+        <!-- Third Content section -->
+        <h2 class="header-font view-header">DLSS</h2>
+        <p class="view-text normal-font">
+            In the hallways, ceiling lights had very small moving animations and there were dust particles.
+            The main issue that I have with DLSS is that those small animations disappear if the camera stays still,
+            but otherwise, it is a really promising technique, especially in scenes that have rapid movement.
+        </p>
+        <img class="view-image normal-font" src="/images/portfolio/raytracing/ceiling.webp" alt="Ceiling featured huge lion painting">
+        <p class="view-text normal-font" >
+            <i class="view-text normal-font">
+                Ceiling dome featured huge lion painting.
+            </i>
+        </p>
+        <img class="view-image normal-font" src="/images/portfolio/raytracing/fireplace.webp" alt="Fireplace">
+        <p class="view-text normal-font" >
+            <i class="view-text normal-font">
+                Fireplace was surprisingly hard to texture.
+            </i>
+        </p>
+    </div>
+</div>

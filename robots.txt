@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/*
+Disallow: /dbadminer/*
+
+Allow: /
+
+Sitemap: https://www.jlind.xyz/sitemap.xml

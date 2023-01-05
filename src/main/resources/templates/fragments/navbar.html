@@ -1,0 +1,36 @@
+<header th:fragment="navbar">
+    <!--Navigation bar-->
+    <nav id="fullNavbar">
+        <div id="navbar">
+            <div class="brand-container">
+                <img src="/images/logo.webp" alt="Custom logo for website">
+            </div>
+            <a id="link1" class="navbarLink" th:classappend="${activelink} == 1 ? active : n" href="/">Home</a>
+            <a id="link2" class="navbarLink" th:classappend="${activelink} == 2 ? active : n" href="/about">About</a>
+            <a id="link3" class="navbarLink" th:classappend="${activelink} == 3 ? active : n" href="/portfolio">Portfolio</a>
+            <a id="link4" class="navbarLink" th:classappend="${activelink} == 4 ? active : n" href="/contact">Contact</a>
+        </div>
+        <div id="navbarbtn">
+            <button aria-label="close navigation bar" id="navbarToggleButton">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+        <script>
+          const button = document.getElementById("navbarToggleButton");
+          let navbarVisibility = false;
+          button.addEventListener("click", () => {
+            navbarVisibility = !navbarVisibility;
+            animateNavbar(navbarVisibility);
+            animateRotation(!navbarVisibility, "navbarToggleButton");
+          });
+
+          const navbarLinkElements = document.getElementsByClassName("navbarLink");
+          for (let i = 0; i < navbarLinkElements.length; i++) {
+            const element = navbarLinkElements[i];
+            element.addEventListener("mouseenter", () => scaleUpOrDown(element.id, true));
+            element.addEventListener("mouseleave", () => scaleUpOrDown(element.id, false));
+          }
+        </script>
+    </nav>
+
+</header>

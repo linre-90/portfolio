@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin panel</title>
+    <link rel="icon" href="/images/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="/admin.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+</head>
+<body class="bg-dark text-white">
+    <div class="container">
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/images/logo.webp" alt="Logo" width="30" height="30">
+                </a>
+            </div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="/admin/documentation">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" class="nav-link bg-dark border-0 text-danger" value="Sign Out"/>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+        <h1>Contacts</h1>
+        <table class="table text-white">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Headline</th>
+                    <th scope="col">Read</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="contact: ${listing}">
+                    <th scope="row" th:text="${contact.id}"></th>
+                    <td th:text="${contact.parseDateFromDateTime()}"></td>
+                    <td th:text="${contact.name}"></td>
+                    <td th:text="${contact.headline}"></td>
+                    <td th:text="${contact.read}"></td>
+                    <td>
+                        <!-- Opens Modal -->
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#modal" class="btn btn-outline-success" th:onclick="|openPopUp('${contact.id}')|">Open</button>
+                        <!-- Default dropstart button -->
+                        <div class="btn-group dropstart">
+                            <button type="button" class="btn btn-outline-secondary rounded" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            <ul class="dropdown-menu" data-bs-theme="dark">
+                                <li><button class="dropdown-item" th:onclick="|updateEntry('${contact.id}')|">Toggle read</button></li>
+                                <li><button class="dropdown-item text-danger" th:onclick="|deleteEntry('${contact.id}')|">Delete</button></li>
+
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Modal -->
+        <div class="modal fade " id="modal" tabindex="-1" aria-labelledby="modalHeader" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header">
+                        <h1 style="word-wrap: break-word;" class="modal-title fs-5" id="modalHeader"></h1>
+                    </div>
+                    <div class="modal-body">
+                        <p style="word-wrap: break-word;" id="modalMessage"></p>
+                        <p style="word-wrap: break-word;" >From: <i><small id="modalName"></small></i></p>
+                        <p style="word-wrap: break-word;">Date: <i><small id="modalDate"></small></i></p>
+                        <p style="word-wrap: break-word;">Email: <i><a id="modalEmail"></a></i></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
