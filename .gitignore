@@ -33,11 +33,18 @@ target/
 .vscode/
 
 ### Production dockerfiles ###
-docker-compose-prod.yml
+docker-compose.yml
 
 ### Production nginx config ###
 default.conf
 
-### Build folder ###
-Build/deployment
+### Exclude ssl certificates ###
+certs/**
+!certs/*.md
+
+
+### Nginx dockerfile and images ###
+Dockerfile-proxy
+DImages/**
+!DImages/*.md
 

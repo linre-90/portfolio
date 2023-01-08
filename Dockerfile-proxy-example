@@ -1,0 +1,10 @@
+# Just an example file ssl-bundle and private key path must be set
+# docker build -t portfolio/proxy:latest -f Dockerfile-proxy .
+FROM nginx:alpine
+COPY ./sitemap.xml /var/www/portfolio/sitemap.xml
+COPY ./robots.txt /var/www/portfolio/robots.txt
+COPY ./default.conf /etc/nginx/conf.d/default.conf
+COPY ./certs/ssl-bundle.crt <WHERE CERT BUNDLE IS>
+COPY ./certs/jlind.key <WHERE PRIVATE KEY IS>
+EXPOSE 80
+EXPOSE 443

@@ -1,4 +1,5 @@
 # This file initializes empty dev database to use with application local development.
+# Or to be used with tests.
 version: "3.8"
 services:
     db:

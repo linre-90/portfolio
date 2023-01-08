@@ -2,7 +2,7 @@
 version: "3.8"
 services:
     proxy:
-        image: nginx:alpine
+        image: portfolio/proxy
         restart: always
         depends_on:
             - spring
@@ -10,17 +10,10 @@ services:
         ports:
             - "80:80"
             - "443:443"
-        volumes:
-            - ./default.conf:/etc/nginx/conf.d/default.conf
-            - ./sitemap.xml:/var/www/portfolio/sitemap.xml
-            - ./robots.txt:/var/www/portfolio/robots.txt
-            # Ssl file mount configs
-            - <HOST_CRT_FILE_PATH>:<CONTAINER_CRT_FILE_PATH>
-            - <HOST_KEY_FILE_PATH>:<CONTAINER_KEY_FILE_PATH>
         networks:
             - portfolionet
     spring:
-        image: portfolioapp
+        image: portfolio/portfolioapp
         restart: always
         environment:
             PORTFOLIO_DATABASE: <DB connection string>
