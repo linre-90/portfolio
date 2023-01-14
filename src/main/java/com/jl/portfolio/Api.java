@@ -17,8 +17,24 @@ import java.util.Optional;
 @RestController
 @Secured("ROLE_USER_ADMIN")
 public class Api {
+
+    /**
+     * Private response class to send for authenticated user if we are authenticated.
+     * */
+    private class AuthResponse{
+
+        public AuthResponse(){
+            boolean authenticated = true;
+        }
+    }
     @Autowired
     ContactService contactService;
+
+    /**
+     * Ping api. Response is application json if authenticated text/html if not.
+     * */
+    @GetMapping("/contact/api/v1/auth")
+    public AuthResponse checkAuth(){ return new AuthResponse();}
 
     /**
      * Route to fetch all data.<br>

@@ -1,4 +1,4 @@
-# docker build -t portfolio/portfolioapp:latest -f Dockerfile --build-arg JAR_FILE=portfolio-1.1.1.jar .
+# docker build -t portfolio/portfolioapp:latest -f Dockerfile --build-arg JAR_FILE=portfolio-1.2.0.jar .
 FROM openjdk:19-jdk-alpine3.16
 RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring
