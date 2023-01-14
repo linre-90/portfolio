@@ -38,7 +38,7 @@ public class WebSequrityConfig {
                         (requests) -> requests.anyRequest().permitAll()
                 ).formLogin((form) ->
                         form.loginPage("/login").permitAll()
-                )
+                ).sessionManagement(session -> session.maximumSessions(1))
                 .logout(logout -> logout.permitAll()
                         .deleteCookies("JSESSIONID")
                         .invalidateHttpSession(true)
