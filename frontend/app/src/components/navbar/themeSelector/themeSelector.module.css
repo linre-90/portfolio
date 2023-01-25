@@ -1,0 +1,24 @@
+.themeSelectorButton{
+    background-color: rgba(0,0,0,0);
+    color: var(--base-text-color);
+    margin-left: .1rem;
+    margin-right: .1rem;
+    border: none;
+}
+
+.themeSelectorButton:hover{
+    cursor: pointer;
+}
+
+.themeSelector{
+
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid var(--base-text-color);
+    border-radius: 1rem;
+    padding: .25rem;
+}
+
+.active{
+    color: var(--active-theme-highlight);
+}

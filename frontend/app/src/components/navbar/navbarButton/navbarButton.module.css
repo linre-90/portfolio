@@ -1,0 +1,9 @@
+.navbarbutton {
+  padding: 5px;
+  margin: 5px;
+  color: var(--base-link-color);
+}
+
+.navbarbutton:visited {
+  color: var(--base-link-color);
+}

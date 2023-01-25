@@ -1,0 +1,12 @@
+.text {
+  color: var(--base-text-color);
+  font-family: var(--common-font);
+}
+
+.textbold {
+  font-weight: bold;
+}
+
+.textcursive {
+  font-style: italic;
+}

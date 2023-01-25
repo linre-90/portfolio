@@ -1,0 +1,56 @@
+@font-face{
+  font-family: headerFont;
+  src: url("./fonts/FredokaOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: commonFont;
+  src: url("./fonts/Raleway-VariableFont_wght.ttf");
+}
+
+/*
+https://colorhunt.co/palette/1b243051557e816797d6d5a8
+
+------ HEX --------
+black: 1B2430
+Gray: d4d4d4
+Navy: 51557E
+Purple: 816797
+Night: D6D5A8
+
+------ RGB --------
+black: rgb(27, 36, 48)
+Gray: rgb(212, 212, 212)
+Navy: rgb(81, 85, 126)
+Purple: rgb(129, 103, 151)
+Night: rgb(214, 213, 168)
+
+------- FONTS ----------
+Headline: Fredoka one
+text: Raleway
+
+*/
+
+.dark {
+  --main-bg-color: #1B2430;
+  --base-link-color: #f8f8f8;
+  --base-text-color: #f8f8f8;
+  --header-font: headerFont;
+  --common-font: commonFont;
+  --active-theme-highlight: #D6D5A8;
+}
+
+.light {
+  --main-bg-color: #f8f8f8;
+  --base-link-color: #1B2430;
+  --base-text-color: #1B2430;
+  --header-font: headerFont;
+  --common-font: commonFont;
+  --active-theme-highlight: #51557E;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: sans-serif;
+}
