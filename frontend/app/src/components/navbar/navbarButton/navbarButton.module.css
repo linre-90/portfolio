@@ -1,9 +1,21 @@
 .navbarbutton {
   padding: 5px;
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2rem;
+  margin-right: 2rem;
   color: var(--base-link-color);
+  font-family: var(--common-font);
+  text-decoration: none;
 }
 
 .navbarbutton:visited {
   color: var(--base-link-color);
+}
+
+@media only screen and (min-width: 1024px) {
+  .navbarbutton{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

@@ -1,0 +1,13 @@
+.attentionButton{
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--complimentary-color-one);
+    border: 2px solid var(--complimentary-color-one);
+    font-weight: bold;
+    box-shadow: 0px 0px 5px 5px var(--complimentary-color-one);;
+}
+
+.attentionButton:hover{
+    cursor: pointer;
+}

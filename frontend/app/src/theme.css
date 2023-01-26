@@ -33,6 +33,8 @@ text: Raleway
 
 .dark {
   --main-bg-color: #1B2430;
+  --secondary-bg-color: #51557E;
+  --complimentary-color-one:#816797;
   --base-link-color: #f8f8f8;
   --base-text-color: #f8f8f8;
   --header-font: headerFont;
@@ -42,6 +44,8 @@ text: Raleway
 
 .light {
   --main-bg-color: #f8f8f8;
+  --secondary-bg-color: #D6D5A8;
+  --complimentary-color-one:#816797;
   --base-link-color: #1B2430;
   --base-text-color: #1B2430;
   --header-font: headerFont;
@@ -53,4 +57,5 @@ body {
   box-sizing: border-box;
   margin: 0;
   font-family: sans-serif;
+  overflow-x: hidden;
 }

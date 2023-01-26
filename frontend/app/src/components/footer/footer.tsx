@@ -22,6 +22,9 @@ const FooterComponent = (): React.ReactElement => {
                 <li>
                     <a href="https://fontawesome.com/">Fontawesome</a>
                 </li>
+                <li>
+                    <a href="https://greensock.com/gsap/">Gsap</a>
+                </li>
             </ul>
         </div>
     );

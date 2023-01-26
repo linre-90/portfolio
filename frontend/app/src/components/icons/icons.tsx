@@ -9,6 +9,8 @@ enum IconSelection {
     copyright = "copyright",
     dark = "dark",
     light = "light",
+    burger = "burger",
+    arrowright = "arrowright",
 }
 
 /**

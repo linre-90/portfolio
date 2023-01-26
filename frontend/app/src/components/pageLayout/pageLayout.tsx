@@ -1,7 +1,6 @@
 import React from "react";
 import { NavBar } from "../navbar/navbar";
 import { FooterComponent } from "../footer/footer";
-import { Center } from "../centerLayout/center";
 import styles from "./pageLayout.module.css";
 import { PageLayoutProps } from "../../types/@types.app";
 
@@ -13,9 +12,7 @@ const PageLayout = ({ activeLink, children }: PageLayoutProps): React.ReactEleme
         <section className={styles.pagelayout}>
             <section>
                 <NavBar activeLink={activeLink} />
-                <div className={styles.pagelayoutcontent}>
-                    <Center>{children}</Center>
-                </div>
+                <div className={styles.pagelayoutcontent}>{children}</div>
             </section>
             <section>
                 <FooterComponent />
