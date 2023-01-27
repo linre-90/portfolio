@@ -32,3 +32,10 @@
     padding-right: 18rem;
   }
 }
+
+@media only screen and (min-width: 2159px) {
+  .pagelayoutcontent {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}

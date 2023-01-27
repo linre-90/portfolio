@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./navbarButton.module.css";
 import { NavbarButtonProps } from "../../../types/@types.app";
+import { Link } from "react-router-dom";
 
 /**
  * Navigation bar link.
@@ -13,9 +14,9 @@ const NavbarButton = ({ text, url, active }: NavbarButtonProps): React.ReactElem
     }
 
     return (
-        <a className={classes} href={url}>
+        <Link className={classes} to={url}>
             {text}
-        </a>
+        </Link>
     );
 };
 

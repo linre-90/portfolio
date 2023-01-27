@@ -1,0 +1,33 @@
+.maxSizeResponsive{
+    width: 100%;
+    height: auto;
+}
+
+.hiddenMd, .hiddenSm, .hiddenLg, .hiddenXl{
+    display: none;
+}
+
+
+/* sm */
+@media only screen and (min-width: 800px) {
+    .hiddenSm{
+        display: block;
+    }
+}
+
+/* md */
+@media only screen and (min-width: 1024px) {
+    .hiddenMd{display: block;}
+}
+
+/* lg */
+@media only screen and (min-width: 1270px) {
+    .hiddenLg{
+        display: block;
+    }
+}
+/* xl */
+@media only screen and (min-width: 1920px) {
+    .hiddenXl{display: block;}
+}
+  

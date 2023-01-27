@@ -3,6 +3,9 @@ import { ThemeContext } from "../../../context/appContext";
 import { Icon, IconSelection } from "../../icons/icons";
 import styles from "./themeSelector.module.css";
 
+/**
+ * Creates application light dark theme controls.
+ */
 const ThemeSelector = (): React.ReactElement => {
     const themeContext = useContext(ThemeContext);
     return (

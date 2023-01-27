@@ -1,3 +1,5 @@
+import { ImageHidden, ImageStyles } from "../components/imageComponent/image";
+
 export type ApiContextType = string;
 
 export type UserContextType = string | null;
@@ -20,8 +22,7 @@ export interface NavbarProps {
 
 export interface PageLayoutProps extends NavbarProps, ChildrenProps {}
 
-export interface TextProps {
-    text: string;
+export interface TextProps extends ChildrenProps {
     bold: boolean;
     cursive: boolean;
 }
@@ -40,4 +41,16 @@ export interface NavbarButtonProps {
 
 export interface AttentionButtonProps extends ChildrenProps {
     textSize: number;
+    action: () => void;
+}
+
+export interface ColumnLayoutProps extends ChildrenProps {
+    columnCount: number;
+}
+
+export interface ImageProps {
+    source: string;
+    altText: string;
+    style: ImageStyles;
+    hiddenOn: ImageHidden;
 }

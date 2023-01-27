@@ -8,13 +8,22 @@ import Particles from "react-particles";
 import { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import { getParticleSetup } from "../particleSetup";
+import { useNavigate } from "react-router-dom";
 
+/**
+ * Creates home or landing page.
+ */
 const Home = (): React.ReactElement => {
     const particlesInit = useCallback(async (engine: Engine) => {
         await loadFull(engine);
     }, []);
 
     const particlesLoaded = useCallback(async (container: Container | undefined) => {}, []);
+
+    const navigate = useNavigate();
+    const attentionButtonAction = (): void => {
+        navigate("/about");
+    };
 
     return (
         <PageLayout activeLink={[true, false, false, false]}>
@@ -30,7 +39,7 @@ const Home = (): React.ReactElement => {
                         <u>Look no more!</u>
                     </h3>
                 </End>
-                <AttentionButton textSize={2}>
+                <AttentionButton action={attentionButtonAction} textSize={2}>
                     <span>
                         Checkout! <Icon icon={IconSelection.arrowright} size={30} alignment="top" />
                     </span>

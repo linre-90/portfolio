@@ -13,10 +13,10 @@ import logo from "../../images/logo.webp";
  */
 const NavBar = ({ activeLink }: NavbarProps): React.ReactElement => {
     const navLinks: React.ReactElement[] = [
-        <NavbarButton key={uuidGenerator()} text="Home" url="#" active={activeLink[0]} />,
-        <NavbarButton key={uuidGenerator()} text="About" url="#" active={activeLink[1]} />,
-        <NavbarButton key={uuidGenerator()} text="Portfolio" url="#" active={activeLink[2]} />,
-        <NavbarButton key={uuidGenerator()} text="Contact" url="#" active={activeLink[3]} />,
+        <NavbarButton key={uuidGenerator()} text="Home" url="/" active={activeLink[0]} />,
+        <NavbarButton key={uuidGenerator()} text="About" url="/about" active={activeLink[1]} />,
+        <NavbarButton key={uuidGenerator()} text="Portfolio" url="/portfolio" active={activeLink[2]} />,
+        <NavbarButton key={uuidGenerator()} text="Contact" url="/contact" active={activeLink[3]} />,
     ];
 
     const hideNavbar = (): void => {
@@ -64,7 +64,7 @@ const NavBar = ({ activeLink }: NavbarProps): React.ReactElement => {
             </div>
             <div className={styles.mobileNavMaster}>
                 <button className={styles.floatingActionButton} onClick={() => displayNavbar()}>
-                    <Icon alignment="baseline" icon={IconSelection.burger} size={30}></Icon>
+                    <Icon alignment="" icon={IconSelection.burger} size={30}></Icon>
                 </button>
                 <div ref={backdropRef} className={styles.backdrop}></div>
                 <div ref={mobileNavbarRef} className={styles.navbarMobile}>

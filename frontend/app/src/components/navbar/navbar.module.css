@@ -15,6 +15,7 @@
   left: 0;
   right: 0;
   opacity: 90%;
+  z-index: 1;
 }
 
 .navbarMobile{
@@ -30,6 +31,7 @@
   right: 0;
   top: 0;
   border-radius: 1rem 0 0 4rem;
+  z-index: 1;
 }
 
 .spacer{
@@ -44,11 +46,14 @@
   position: fixed;
   bottom: 50px;
   right: 20px;
-  border-radius: 49%;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
   border: 2px solid var(--complimentary-color-one);
   background-color: var(--complimentary-color-one);
   color: var(--main-bg-color);
   padding: 1rem;
+  text-align: center;
 }
 
 .navbarLogo{

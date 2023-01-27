@@ -2,6 +2,10 @@ import React from "react";
 import styles from "./footer.module.css";
 import { Icon, IconSelection } from "../icons/icons";
 
+/**
+ * Very simple footer.
+ * Shows only copyright notice and links to different used techs.
+ */
 const FooterComponent = (): React.ReactElement => {
     return (
         <div className={styles.footer + " " + styles.footerposition}>

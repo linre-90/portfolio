@@ -5,7 +5,7 @@ import { TextProps } from "../../types/@types.app";
 /**
  * Text displaying component
  */
-const Text = ({ text, bold, cursive }: TextProps): ReactElement => {
+const Text = ({ bold, cursive, children }: TextProps): ReactElement => {
     let combinedStyles = "";
 
     if (bold) {
@@ -16,7 +16,7 @@ const Text = ({ text, bold, cursive }: TextProps): ReactElement => {
         combinedStyles = combinedStyles.concat(` ${styles.textcursive}`);
     }
 
-    return <p className={styles.text + combinedStyles}>{text}</p>;
+    return <div className={styles.text + combinedStyles}>{children}</div>;
 };
 
 export { Text };
