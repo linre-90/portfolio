@@ -1,0 +1,20 @@
+.columnlayout{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columnlayout div{
+    width: 50% !important;
+}
+
+.verticalAlignText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 800px) {
+  .columnlayout div{
+    width: 100% !important;
+  }
+}

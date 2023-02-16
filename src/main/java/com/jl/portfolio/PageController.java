@@ -34,6 +34,7 @@ public class PageController {
      * @param model Spring model
      * @return Home template.
      * */
+
     @GetMapping("/")
     public String home(Model model){
         // Links are numbered from top to bottom starting with 1
@@ -51,7 +52,7 @@ public class PageController {
     public String about(Model model){
         model.addAttribute("activelink", 2);
         model.addAttribute("page", pageService.getAboutPage());
-        return "about";
+        return "about.html";
     }
 
     /**

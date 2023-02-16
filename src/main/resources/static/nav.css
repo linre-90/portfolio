@@ -1,0 +1,141 @@
+/** Css is written in "module" style. */
+nav{
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 2rem;
+}
+
+nav .navbarDesktop{
+  display: none;
+}
+
+nav .backdrop{
+  background-color: rgba(0, 0, 0, .85);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 90%;
+  z-index: 1;
+}
+
+nav .navbarMobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-end;
+  padding: 2rem;
+  background-color: var(--main-bg-color);
+  width: 60%;
+  height: 70vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  border-radius: 1rem 0 0 4rem;
+  z-index: 1;
+}
+
+nav .spacer{
+  height: 2rem;
+}
+
+nav .hidden{
+  display: none;
+}
+
+nav .floatingActionButton{
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid var(--complimentary-color-one);
+  background-color: var(--complimentary-color-one);
+  color: var(--main-bg-color);
+  padding: 1rem;
+  text-align: center;
+  font-size: 30px;
+}
+
+nav .navbarLogo{
+  width: 5rem;
+  height: 5rem;
+  margin-right: auto;
+}
+
+nav .desktopLinkWrapper{
+  display: flex;
+  align-items: center;
+  margin-right: 6rem;
+}
+
+nav .navbarbutton {
+      padding: 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      color: var(--base-link-color);
+      font-family: var(--common-font);
+      text-decoration: none;
+}
+
+nav .navbarbutton:visited {
+    color: var(--base-link-color);
+}
+
+nav .end {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav .themeSelectorButton{
+    background-color: rgba(0,0,0,0);
+    color: var(--base-text-color);
+    margin-left: .5rem;
+    margin-right: .5rem;
+    border: none;
+}
+
+nav .themeSelectorButton:hover{
+    cursor: pointer;
+}
+
+nav .themeSelector{
+    display: flex;
+    justify-content: space-around;
+    padding: .25rem;
+}
+
+
+@media only screen and (min-width: 600px) {
+  nav .navbarMobile{
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav .mobileNavMaster{
+    display: none;
+  }
+
+  nav .navbarDesktop{
+    display: flex;
+  }
+
+  nav .navbarLogo{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 2rem;
+  }
+
+  nav .navbarbutton{
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+}
+
+

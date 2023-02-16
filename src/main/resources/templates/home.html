@@ -1,34 +1,114 @@
-<!doctype html>
-<!-- Home/index page template -->
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/header.html :: head}"></head>
-<body>
-    <!-- Navigation bar and background image-->
-    <header th:replace="~{fragments/navbar.html :: navbar}"></header>
-    <span th:replace="~{fragments/background.html :: background}"></span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Juho's portfolio site. In here I will present projects that i have worked on.">
+    <meta name="keywords" content="Portfolio, Software development, Coding, Job search">
+    <meta name="author" content="Juho Lindemark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Welcome to my portfolio site!</title>
+    <!-- EXT sources -->
+    <link rel="icon" href="/images/logo.webp" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link href="/common.css" rel="stylesheet" />
+    <!-- Stylesheets -->
+    <link href="/nav.css" rel="stylesheet" />
+    <link href="/footer.css" rel="stylesheet" />
+    <link href="/home.css" rel="stylesheet" />
+    <link href="/pagelayout.css" rel="stylesheet" />
+</head>
+<body class="dark">
+    <div class="pageBgr"></div>
+    <div class="pageWrapper">
+        <!-- Navigation and main content -->
+        <main>
+            <!-- Navigation section -->
+            <nav>
+                <div class="navbarDesktop">
+                    <img class="navbarLogo" src="/images/logo.webp" alt="Logo">
+                    <div class="end">
+                        <div class="themeSelector">
+                            <button class="themeSelectorButton" onclick="setTheme('light');"><i class="fa-solid fa-sun"></i></button>
+                            <button class="themeSelectorButton" onclick="setTheme('dark');"><i class="fa-solid fa-moon"></i></button>
+                        </div>
+                        <div class="desktopLinkWrapper">
+                            <a class="navbarbutton" href="/">Home</a>
+                            <a class="navbarbutton" href="/about">About</a>
+                            <a class="navbarbutton" href="/portfolio">Portfolio</a>
+                            <a class="navbarbutton" href="/contact">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobileNavMaster">
+                    <button class="floatingActionButton" onclick="displayMobileNav();"><i class="fa-solid fa-bars"></i></button>
+                    <div id="backdrop" class="backdrop hidden"></div>
+                    <div id="mobilenavbar" class="navbarMobile hidden">
+                        <img class="navbarLogo" src="/images/logo.webp" alt="Logo">
+                        <a class="navbarbutton" href="/">Home</a>
+                        <a class="navbarbutton" href="/about">About</a>
+                        <a class="navbarbutton" href="/portfolio">Portfolio</a>
+                        <a class="navbarbutton" href="/contact">Contact</a>
+                        <!-- Spacer -->
+                        <div style="height: 40px;"></div>
+                        <div class="themeSelector">
+                            <button class="themeSelectorButton" onclick="setTheme('light');"><i class="fa-solid fa-sun"></i></button>
+                            <button class="themeSelectorButton" onclick="setTheme('dark');"><i class="fa-solid fa-moon"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <script src="/navbar.js"></script>
+            </nav>
+            <section>
+            <!-- Content section -->
 
-    <!--Main content section-->
-    <main>
-        <h1 class="header-font huge-header align-text-to-end">Looking for your next software developer?</h1>
-        <h2 class="header-font medium-header">Look no more!</h2>
-        <p class="text-section">
-            Hello! My name is Juho, and I am a full stack developer from Finland! I have experience in large range of
-            technologies including Node, Php, Python, WordPress and front end frameworks like React and Vue. I have
-            deployed applications to Heroku, Google Firebase and AWS.
-        </p>
-        <p class="text-section">
-            I know Unity and I have some experience with Unreal Engine. My main focus is on programming, but I also try to
-            do some graphics with Blender and inkscape.
-        </p>
-        <div id="cta-container">
-            <a href="/portfolio" class="cta-button">
-                Portfolio is in here!
-            </a>
-        </div>
-        <script>
-                ctaAnimation("cta-container");
-        </script>
-    </main>
-    <footer th:replace="~{fragments/footer.html :: footer}"></footer>
+                <!-- Particle container -->
+                <div id="tsparticles"></div>
+                <!-- Tsparticle bundle and particle setup script -->
+                <script src="/tsparticles.bundle.min.js"></script>
+                <script src="/particleSetup.js"></script>
+                <!-- TXT content-->
+                <div class="pagelayoutcontent">
+                    <h1 class="customHeadline1">
+                        <span>Looking for</span> <u>your next</u> <span>software developer?</span>
+                    </h1>
+                    <h3 class="customHeadline2">
+                        <u>Look no more!</u>
+                    </h3>
+                    <a class="attentionButton" href="/about">
+                        <span>Checkout! <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!--Footer-->
+        <footer>
+            <div>
+            <p>
+                <i class="fa-solid fa-copyright"></i> Juho Lindemark 2023
+            </p>
+            <p>Created with</p>
+            <ul class="footerListStyle">
+                <li>
+                    <a href="https://spring.io/">Spring Boot</a>
+                </li>
+                <li>
+                    <a href="https://reactjs.org/">React</a>
+                </li>
+                <li>
+                    <a href="https://www.linode.com/">Linode</a>
+                </li>
+                <li>
+                    <a href="https://fontawesome.com/">Fontawesome</a>
+                </li>
+                <li>
+                    <a href="https://greensock.com/gsap/">Gsap</a>
+                </li>
+            </ul>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

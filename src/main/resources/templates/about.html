@@ -1,52 +1,141 @@
-<!doctype html>
-<!-- Home/index page template -->
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/header.html :: head}"></head>
-<body>
-    <!-- Navigation bar and background image-->
-    <header th:replace="~{fragments/navbar.html :: navbar}"></header>
-    <span th:replace="~{fragments/background.html :: background}"></span>
-
-    <!--Main content section-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="This page is all about me! Yes me! Check out my cv video and written description.">
+    <meta name="keywords" content="Portfolio, Software development, Coding, Job search">
+    <meta name="author" content="Juho Lindemark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>All about me!</title>
+    <!-- EXT sources -->
+    <link rel="icon" href="/images/logo.webp" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link href="/common.css" rel="stylesheet" />
+    <!-- Stylesheets -->
+    <link href="/nav.css" rel="stylesheet" />
+    <link href="/footer.css" rel="stylesheet" />
+    <link href="/pagelayout.css" rel="stylesheet" />
+    <link href="/about.css" rel="stylesheet" />
+    <link href="/common.css" rel="stylesheet" />
+    <link href="/video.css" rel="stylesheet" />
+    <link href="/image.css" rel="stylesheet" />
+</head>
+<body class="dark">
+<div class="pageBgr"></div>
+<div class="pageWrapper">
+    <!-- Navigation and main content -->
     <main>
-        <h1 class="header-font huge-header">Who am I?</h1>
-        <p class="text-section">
-            I am Juho Fullstack and a game developer from Finland.
-            I have taken an interest in programming for quite a while now.
-            It started as  a child by modding games or just goofing around with the attitude "hey what this does?"...
-            <br><br>
-            I found my true calling in computer science while I was studying CNC machining.
-            We practiced writing instructions on those machines and I discovered it was awesome.
-            Not the machining part, but the programming part.One thing led to another,
-            and suddenly I was on a beginner's Java course at University of Helsinki.
-            After that, I started doing courses at Udemy on web development, React and Android applications.
-            <br><br>
-            Later, I discovered a program called Amkoodari in XAMK, which is a University of
-            applied science located in southeast Finland. I completed about 60 credits there.
-            Studies focused mainly on the web, AI and databases.
-            We also completed some graphical design courses and a "lean-thinking" course.
-            <br><br>
-            After an unfortunate series of events, I decided to take a break from work and
-            study game development full time. So, I will graduate from Vuoksi 2023,
-            a vocational school in western Finland, and be a real software developer.
-            I have also continued to find and complete higher education courses about software development and
-            I have completed a course called Full stack Open. It was created by the University of Helsinki and
-            focuses on fullstack products.We used MERN stack.
-            The course also had sections for GraphQl, Typescript, Containers and React native.
-        </p>
-        <h2 class="medium-header header-font">Formal education</h2>
-        <ul>
-            <li>Software developer (Game developer) - Vuoksi 2023</li>
-            <li>Full stack open - University of Helsinki 2023</li>
-            <li>AmKoodari - XAMK 2022</li>
-            <li>Programming Mooc - University of Helsinki 2020</li>
-        </ul>
-
-        <a id="cta-download" href="/files/cv.pdf" download class="cta-button">Full cv can be downloaded here(pdf)</a>
-        <script>
-            constantPulse("cta-download", 1.02);
-        </script>
+        <!-- Navigation section -->
+        <nav>
+            <div class="navbarDesktop">
+                <img class="navbarLogo" src="/images/logo.webp" alt="Logo">
+                <div class="end">
+                    <div class="themeSelector">
+                        <button class="themeSelectorButton" onclick="setTheme('light');"><i class="fa-solid fa-sun"></i></button>
+                        <button class="themeSelectorButton" onclick="setTheme('dark');"><i class="fa-solid fa-moon"></i></button>
+                    </div>
+                    <div class="desktopLinkWrapper">
+                        <a class="navbarbutton" href="/">Home</a>
+                        <a class="navbarbutton" href="/about">About</a>
+                        <a class="navbarbutton" href="/portfolio">Portfolio</a>
+                        <a class="navbarbutton" href="/contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobileNavMaster">
+                <button class="floatingActionButton" onclick="displayMobileNav();"><i class="fa-solid fa-bars"></i></button>
+                <div id="backdrop" class="backdrop hidden"></div>
+                <div id="mobilenavbar" class="navbarMobile hidden">
+                    <img class="navbarLogo" src="/images/logo.webp" alt="Logo">
+                    <a class="navbarbutton" href="/">Home</a>
+                    <a class="navbarbutton" href="/about">About</a>
+                    <a class="navbarbutton" href="/portfolio">Portfolio</a>
+                    <a class="navbarbutton" href="/contact">Contact</a>
+                    <!-- Spacer -->
+                    <div style="height: 40px;"></div>
+                    <div class="themeSelector">
+                        <button class="themeSelectorButton" onclick="setTheme('light');"><i class="fa-solid fa-sun"></i></button>
+                        <button class="themeSelectorButton" onclick="setTheme('dark');"><i class="fa-solid fa-moon"></i></button>
+                    </div>
+                </div>
+            </div>
+            <script src="/navbar.js"></script>
+        </nav>
+        <section>
+            <div class="pagelayoutcontent">
+                <h1>Tired of reading? Here is the cv video!</h1>
+                <p>
+                    <u><small>Warning! Contains flashing lights!</small></u>
+                </p>
+                <div class="videoFrame">
+                    <iframe
+                            src="https://www.youtube.com/embed/1d8ALlXSVBY"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    ></iframe>
+                </div>
+                <div class="columnlayout">
+                    <div><img class="maxSizeResponsive" src="/images/questionMark2K.webp" alt="Question mark"></div>
+                    <div class="verticalAlignText">
+                        <p>
+                            I am Juho Fullstack and a game developer from Finland. I have taken an interest in programming for quite a while now. Computers have
+                            always been my passion. It started as a child by modding games or just goofing around with the attitude 'hey what this does?'...
+                        </p>
+                        <p>
+                            I found my true calling in computer science while I was studying CNC machining. We practiced writing instructions on those machines and
+                            I discovered it was awesome. Not the machining part, but the programming part. One thing led to another, and suddenly I was on a
+                            beginner's Java course at University of Helsinki. After that, I started doing courses at Udemy on web development, React and Android
+                            applications.
+                        </p>
+                    </div>
+                    <div class="verticalAlignText">
+                        <p>
+                            Later, I discovered a program called Amkoodari in XAMK, which is a University of applied science located in southeast Finland. I
+                            completed about 60 credits there. Studies focused mainly on the web, AI and databases. We also completed some graphical design courses
+                            and a "lean-thinking" course.
+                        </p>
+                        <p>
+                            After an unfortunate series of events, I decided to take a break from work and study game development full time. So, I will graduate
+                            from Vuoksi 2023, a vocational school in western Finland, and be a real software developer. I have also continued to find and complete
+                            higher education courses about software development and I have completed a course called Full stack Open. It was created by the
+                            University of Helsinki and focuses on fullstack products.We used MERN stack. The course also had sections for GraphQl, Typescript,
+                            Containers and React native.
+                        </p>
+                    </div>
+                    <div><img class="maxSizeResponsive hiddenSm" src="/images/exmark.webp" alt="Exclamation mark"></div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer th:replace="~{fragments/footer.html :: footer}"></footer>
+
+    <!--Footer-->
+    <footer>
+        <div>
+            <p>
+                <i class="fa-solid fa-copyright"></i> Juho Lindemark 2023
+            </p>
+            <p>Created with</p>
+            <ul class="footerListStyle">
+                <li>
+                    <a href="https://spring.io/">Spring Boot</a>
+                </li>
+                <li>
+                    <a href="https://reactjs.org/">React</a>
+                </li>
+                <li>
+                    <a href="https://www.linode.com/">Linode</a>
+                </li>
+                <li>
+                    <a href="https://fontawesome.com/">Fontawesome</a>
+                </li>
+                <li>
+                    <a href="https://greensock.com/gsap/">Gsap</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
 </body>
 </html>

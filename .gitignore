@@ -48,28 +48,5 @@ Dockerfile-proxy
 DImages/**
 !DImages/*.md
 
-### Frontend ###
-# dependencies
-frontend/app/node_modules
-.pnp
-.pnp.js
-frontend/app/public
-
-# testing
-frontend/app/coverage
-
-# production
-frontend/app/build
-
-# misc
-frontend/app.DS_Store
-frontend/app.env.local
-frontend/app.env.development.local
-frontend/app.env.test.local
-frontend/app.env.production.local
-
-frontend/app/npm-debug.log*
-frontend/appy/arn-debug.log*
-frontend/app/yarn-error.log*
 
 
