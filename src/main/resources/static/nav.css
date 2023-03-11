@@ -80,11 +80,11 @@ nav .navbarbutton {
       font-family: var(--common-font);
       text-decoration: none;
 }
-
+/*
 nav .navbarbutton:visited {
     color: var(--base-link-color);
 }
-
+*/
 nav .end {
     text-align: center;
     display: flex;
@@ -108,6 +108,10 @@ nav .themeSelector{
     display: flex;
     justify-content: space-around;
     padding: .25rem;
+}
+
+nav .active{
+    color: var(--active-theme-highlight);
 }
 
 
