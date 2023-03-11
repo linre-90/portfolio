@@ -1,10 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <!-- Meta -->
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="description" content="Here some of my projects are presented.">
+    <meta name="keywords" content="Portfolio, Software development, Coding, Job search">
+    <meta name="author" content="Juho Lindemark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Send me a message!</title>
+    <!-- EXT sources -->
+    <link rel="icon" href="/images/logo.webp" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link href="/common.css" rel="stylesheet" />
+    <!-- Stylesheets -->
+    <link href="/nav.css" rel="stylesheet" />
+    <link href="/footer.css" rel="stylesheet" />
+    <link href="/pagelayout.css" rel="stylesheet" />
+    <link href="/common.css" rel="stylesheet" />
 </head>
-<body>
-    <h1>Portfolio</h1>
+<body class="dark">
+<div class="pageBgr"></div>
+<div class="pageWrapper">
+    <!-- Navigation and main content -->
+    <main>
+        <!-- Navigation section -->
+        <nav>
+            <div class="navbarDesktop">
+                <img class="navbarLogo" src="/images/logo.webp" alt="Logo">
+                <div class="end">
+                    <div class="themeSelector">
+                        <button class="themeSelectorButton" onclick="setTheme('light');"><i class="fa-solid fa-sun"></i></button>
+                        <button class="themeSelectorButton" onclick="setTheme('dark');"><i class="fa-solid fa-moon"></i></button>
+                    </div>
+                    <div class="desktopLinkWrapper">
+                        <a class="navbarbutton" href="/">Home</a>
+                        <a class="navbarbutton" href="/about">About</a>
+                        <a class="navbarbutton" href="/portfolio">Portfolio</a>
+                        <a class="navbarbutton active" href="/contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobileNavMaster">
+                <button class="floatingActionButton" onclick="displayMobileNav();"><i class="fa-solid fa-bars"></i></button>
+                <div id="backdrop" class="backdrop hidden"></div>
+                <div id="mobilenavbar" class="navbarMobile hidden">
+                    <img class="navbarLogo" src="/images/logo.webp" alt="Logo">
+                    <a class="navbarbutton" href="/">Home</a>
+                    <a class="navbarbutton" href="/about">About</a>
+                    <a class="navbarbutton" href="/portfolio">Portfolio</a>
+                    <a class="navbarbutton active" href="/contact">Contact</a>
+                    <!-- Spacer -->
+                    <div style="height: 40px;"></div>
+                    <div class="themeSelector">
+                        <button class="themeSelectorButton" onclick="setTheme('light');"><i class="fa-solid fa-sun"></i></button>
+                        <button class="themeSelectorButton" onclick="setTheme('dark');"><i class="fa-solid fa-moon"></i></button>
+                    </div>
+                </div>
+            </div>
+            <script src="/navbar.js"></script>
+        </nav>
+        <!-- Content section -->
+        <section>
+            <div class="pagelayoutcontent">
+                <!-- Page content -->
+                <h1>POrtfolio</h1>
+
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div>
+            <p>
+                <i class="fa-solid fa-copyright"></i> Juho Lindemark 2023
+            </p>
+            <p>Created with</p>
+            <ul class="footerListStyle">
+                <li>
+                    <a href="https://spring.io/">Spring Boot</a>
+                </li>
+                <li>
+                    <a href="https://reactjs.org/">React</a>
+                </li>
+                <li>
+                    <a href="https://www.linode.com/">Linode</a>
+                </li>
+                <li>
+                    <a href="https://fontawesome.com/">Fontawesome</a>
+                </li>
+                <li>
+                    <a href="https://greensock.com/gsap/">Gsap</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
 </body>
 </html>

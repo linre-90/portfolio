@@ -2,22 +2,26 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <meta charset="UTF-8">
 <title>Thank you! - Juho Lindemark</title>
-<link href="/view.css" rel="stylesheet" />
-<link href="/style.css" rel="stylesheet" />
+<link href="/received.css" rel="stylesheet" />
 <link rel="icon" href="/images/logo.png" />
 <script src="/animation.js"></script>
 <meta name="description" content="Confirmation of form receiving"/>
+<link href="/common.css" rel="stylesheet" />
+<link href="/received.css" rel="stylesheet" />
+
+
 <body>
     <!--Main content section-->
     <main>
-        <h1 class="header-font" >Form has been received. Thank you! </h1>
-        <p class="view-text normal-font" th:text="'Name: ' + ${contact.name}" />
-        <p class="view-text normal-font" th:text="'Email: ' + ${contact.email}" />
-        <p class="view-text normal-font" th:text="'Date: ' + ${contact.date}" />
-        <p class="view-text normal-font" th:text="'Headline: ' + ${contact.headline}" />
-        <p class="view-text normal-font" th:text="'Message: ' + ${contact.message}" />
-        <a class="cta-button card-link" href="/contact">Submit another message</a>
-        <a class="cta-button card-link" href="/">Return home</a>
+        <h1 >Form has been received. Thank you! </h1>
+        <p th:text="'Name: ' + ${contact.name}" />
+        <p th:text="'Email: ' + ${contact.email}" />
+        <p th:text="'Date: ' + ${contact.date}" />
+        <p th:text="'Headline: ' + ${contact.headline}" />
+        <p th:text="'Message: ' + ${contact.message}" />
+        <div class="spacer"></div>
+        <a href="/contact">Submit another message</a>
+        <a href="/">Return home</a>
     </main>
 </body>
 </html>

@@ -1,0 +1,72 @@
+.formContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer label{
+    font-size: 1rem;
+    color: var(--base-text-color);
+    margin-top: 2rem;
+    margin-bottom: .5rem;;
+}
+
+.formInput{
+    height: 2rem;
+    background-color: var(--complimentary-color-one);
+    border-radius: 4px;
+    border: none;
+    padding: 5px;
+    font-size: 1rem;
+    opacity: 80%;
+}
+
+.errorText{
+    color: red;
+    font-size: 1rem;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--base-text-color);
+    opacity: 1; /* Firefox */
+    font-family: var(--common-font);
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--base-text-color);
+    font-family: var(--common-font);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--base-text-color);
+    font-family: var(--common-font);
+  }
+
+
+.formInputMessage{
+    height: auto;
+}
+
+.submitBtn{
+    margin-top: 2rem;
+    height: 3rem;
+    width: 6rem;
+    background-color: var(--complimentary-color-one);
+    border-radius: 1rem;
+    color: var(--main-bg-color);
+    border: none;
+    font-family: var(--header-font);
+    /*letter-spacing: .15em;*/
+}
+
+.submitBtn:hover{
+    cursor: pointer;
+}
+
+.pagelayoutcontent a {
+    color: var(--base-text-color);
+  
+  }
+  
+  .pagelayoutcontent a:visited {
+    color: var(--base-text-color);
+  }

@@ -65,32 +65,32 @@
             <section>
                 <div class="pagelayoutcontent">
                     <!-- Page content -->
-                    <h1 class="header-font">Contact</h1>
-                    <p class="text-section">
-                        <small>If you prefer, you can send <a href="mailto:jlportfolio@outlook.com">direct email</a> to me or fill the form below.</small>
+                    <h1>Contact</h1>
+                    <p>
+                        If you prefer, you can send <a href="mailto:jlportfolio@outlook.com">direct email</a> to me or fill the form below.
                     </p>
 
                     <form th:action="@{/contact}" th:object="${contact}" method="post">
-                        <div class="form-container">
+                        <div class="formContainer">
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                             <!-- Name -->
                             <label for="name">Name:</label>
-                            <p class="error-text" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
-                            <input id="name" class="form-input" th:field="*{name}" type="text" placeholder="Your name..." minlength="5" maxlength="80" required />
+                            <p class="errorText" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+                            <input id="name" class="formInput" th:field="*{name}" type="text" placeholder="Your name..." minlength="5" maxlength="80" required />
                             <!-- Email -->
                             <label for="email">Email:</label>
-                            <p class="error-text" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
-                            <input id="email" class="form-input" th:field="*{email}" type="email" placeholder="Your email..." minlength="5" maxlength="120" required/>
+                            <p class="errorText" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+                            <input id="email" class="formInput" th:field="*{email}" type="email" placeholder="Your email..." minlength="5" maxlength="120" required/>
                             <!-- Headline -->
                             <label for="headline">Headline:</label>
-                            <p class="error-text" th:if="${#fields.hasErrors('headline')}" th:errors="*{headline}"></p>
-                            <input id="headline" class="form-input" th:field="*{headline}" type="text" placeholder="Your headline..." minlength="8" maxlength="100" required/>
+                            <p class="errorText" th:if="${#fields.hasErrors('headline')}" th:errors="*{headline}"></p>
+                            <input id="headline" class="formInput" th:field="*{headline}" type="text" placeholder="Your headline..." minlength="8" maxlength="100" required/>
                             <!-- Message -->
                             <label for="msg">Message:</label>
-                            <p class="error-text" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></p>
-                            <textarea id="msg" class="form-input" th:field="*{message}" type="text" placeholder="Your message..." rows="10" required minlength="30" maxlength="300"></textarea>
-                            <button id="submitBtn" class="cta-button" type="submit">
-                                Send
+                            <p class="errorText" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></p>
+                            <textarea id="msg" class="formInput formInputMessage" th:field="*{message}" type="text" placeholder="Your message..." rows="10" required minlength="30" maxlength="300"></textarea>
+                            <button id="submitBtn" class="submitBtn" type="submit">
+                                SEND <i class="fa-solid fa-arrow-right"></i></span>
                             </button>
                         </div>
                     </form>

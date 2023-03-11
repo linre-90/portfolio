@@ -112,7 +112,7 @@ nav .themeSelector{
 }
 
 nav .active{
-    color: var(--active-theme-highlight);
+    /*color: var(--active-theme-highlight);*/
 }
 
 

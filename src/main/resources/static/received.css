@@ -1,0 +1,34 @@
+a{
+    color: #f8f8f8;
+    border: 1px solid #816797;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+a:visited{
+    color: #f8f8f8;
+}
+
+body{
+    background-color: #51557E;
+    color: #f8f8f8;
+    font-family: commonFont;
+    margin: 1rem;
+}
+main{
+    width: 80%;
+}
+
+.spacer{
+    height: 2rem;
+}
+
+main{
+    
+    overflow-wrap: break-word;
+}
+
+body h1{
+    font-family: headerFont;
+}
