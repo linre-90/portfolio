@@ -1,22 +1,33 @@
-<div th:fragment="portfolioitem">
-    <div class="bg" id="view-bg"></div>
-    <div class="view-container">
-        <h1 class="header-font view-header" th:text="${item.name}"></h1>
-        <div>
-            <span th:each="tab : ${item.tags}" class="card-tag header-font" th:text="${tab}"></span>
-        </div>
-        <p class="view-text normal-font"><small>27.12.2022</small></p>
-        <p class="view-text normal-font">
-            <i class="view-text normal-font">
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Catquiz is quiz about cats. It is  written in React and challenges your cat knowledge.">
+    <meta name="keywords" content="React, Typescript, Firebase, Cat, Quiz">
+    <title>Catquiz</title>
+    <link rel="icon" href="/images/logo.webp" />
+    <link href="/common.css" rel="stylesheet" />
+    <link href="/pagelayout.css" rel="stylesheet" />
+    <link href="/view.css" rel="stylesheet" />
+</head>
+<body class="dark">
+    <div class="pagelayoutcontent">
+        <h1 class="view-header">Catquiz</h1>
+        <p class="view-text"><small>27.12.2022</small></p>
+        <p class="view-text">
+            <i class="view-text">
                 Catquiz is a traditional quiz about cats. Still available
                 <a target="_blank" href="https://catquiz-843f1.web.app/">here</a>.
             </i>
         </p>
-        <img class="view-image normal-font" th:src="${item.image}" alt="General screenshot from site">
-        <p class="view-text normal-font" ><i class="view-text normal-font">Image from the frontpage</i></p>
+        <img class="view-image" src="/images/portfolio/catquiz/catquiz-index.webp" alt="General screenshot from site">
+        <p class="view-text" ><i class="view-text">Image from the frontpage</i></p>
         <!-- First Content section -->
-        <h2 class="header-font view-header">What is it?</h2>
-        <p class="view-text normal-font">
+        <h2 class="view-header">What is it?</h2>
+        <p class="view-text">
             Catquiz was catsopinion.com blog's content quiz.
             It was a funny addition to static written blog content and was actually quite informative.
             The quiz can be played in Finnish or English.
@@ -28,20 +39,20 @@
         </p>
 
         <!-- Second Content section -->
-        <h2 class="header-font view-header">Goals and lifespan</h2>
-        <p class="view-text normal-font">
+        <h2 class="view-header">Goals and lifespan</h2>
+        <p class="view-text">
             I did not have any specific goals for this in mind.
             I just wanted to make a quiz about cats,
             it seemed like a fun project to make.
             At least I did get in touch with typescript and I liked it.
             The quiz is still up and available to try.
         </p>
-        <img class="view-image normal-font" src="/images/portfolio/catquiz/catquiz-gameplay.webp" alt="Gameplay screen shot">
-        <p class="view-text normal-font" ><i class="view-text normal-font">Image from the gameplay</i></p>
+        <img class="view-image" src="/images/portfolio/catquiz/catquiz-gameplay.webp" alt="Gameplay screen shot">
+        <p class="view-text" ><i class="view-text">Image from the gameplay</i></p>
 
         <!-- Third Content section -->
-        <h2 class="header-font view-header">Tech used</h2>
-        <p class="view-text normal-font">
+        <h2 class="view-header">Tech used</h2>
+        <p class="view-text">
             Catquiz is a statically hosted single page application.
             It is written in react. Data is stored in the Firebase realtime database and
             the database was filled with python script that can be found <a target="_blank" href="https://github.com/linre-90/catquiz-db-fill">here</a>.
@@ -54,11 +65,12 @@
             Catquiz code can be found at <a target="_blank" href="https://github.com/linre-90/catquiz">Github</a> repo.
             Python script can be found at <a target="_blank" href="https://github.com/linre-90/catquiz-db-fill">Github</a> repo.
         </p>
-        <img class="view-image normal-font" src="/images/portfolio/catquiz/catquiz-end.webp" alt="Gameplay ending screen that tells how well player performed">
-        <p class="view-text normal-font" >
-            <i class="view-text normal-font">
+        <img class="view-image" src="/images/portfolio/catquiz/catquiz-end.webp" alt="Gameplay ending screen that tells how well player performed">
+        <p class="view-text">
+            <i class="view-text">
                 At the end player gets report with correct answers
             </i>
         </p>
     </div>
-</div>
+</body>
+</html>

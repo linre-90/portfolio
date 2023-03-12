@@ -20,51 +20,33 @@ import java.util.TimeZone;
 public class PageController {
 
     @Autowired
-    PageService pageService;
-
-    @Autowired
-    PortfolioService portfolioService;
-
-    @Autowired
     ContactService contactService;
 
 
     /**
      * Home page route.
-     * @param model Spring model
      * @return Home template.
      * */
-
     @GetMapping("/")
-    public String home(Model model){
-        // Links are numbered from top to bottom starting with 1
-        model.addAttribute("activelink", 1);
-        model.addAttribute("page", pageService.getHomePage());
+    public String home(){
         return "home";
     }
 
     /**
      * About page route.
-     * @param model Spring model
      * @return About template.
      * */
     @GetMapping("/about")
-    public String about(Model model){
-        model.addAttribute("activelink", 2);
-        model.addAttribute("page", pageService.getAboutPage());
+    public String about(){
         return "about.html";
     }
 
     /**
      * Portfolio listing page route.
-     * @param model Spring model
      * @return Portfolio template
      * */
     @GetMapping("/portfolio")
-    public String portfolio(Model model){
-        model.addAttribute("activelink", 3);
-        model.addAttribute("page", pageService.getPortfolioPage());
-        model.addAttribute("cards", portfolioService.getPortfolioItemsAsList());
+    public String portfolio(){
         return "portfolio";
     }
 
@@ -75,8 +57,6 @@ public class PageController {
      * */
     @GetMapping("/contact")
     public String contact(Model model){
-        model.addAttribute("activelink", 4);
-        model.addAttribute("page", pageService.getContactPage());
         model.addAttribute("contact", new Contact());
         return "contact";
     }
@@ -93,8 +73,6 @@ public class PageController {
         if(bindingResult.hasErrors()){
             // Form had filling errors
             System.out.println(bindingResult.getAllErrors());
-            model.addAttribute("activelink", 4);
-            model.addAttribute("page", pageService.getContactPage());
             model.addAttribute("contact",contact);
             return "contact";
         }
@@ -111,8 +89,7 @@ public class PageController {
      * @return Error template
      * */
     @GetMapping("/error")
-    public String error(Model model){
-        model.addAttribute("page", pageService.getErrorPage());
+    public String error(){
         return "error";
     }
 

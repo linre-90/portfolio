@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.jlind.xyz/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-03-12</lastmod>
   </url>
   <url>
     <loc>https://www.jlind.xyz/about</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-03-12</lastmod>
   </url>
   <url>
     <loc>https://www.jlind.xyz/contact</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-03-12</lastmod>
   </url>
   <url>
     <loc>https://www.jlind.xyz/portfolio</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-03-12</lastmod>
   </url>
   <url>
-    <loc>https://www.jlind.xyz/portfolio/view?id=0</loc>
-    <lastmod>2023-01-04</lastmod>
+    <loc>https://www.jlind.xyz/portfolio/view/catquiz</loc>
+    <lastmod>2023-03-12</lastmod>
   </url>
   <url>
-    <loc>https://www.jlind.xyz/portfolio/view?id=1</loc>
-    <lastmod>2023-01-04</lastmod>
+    <loc>https://www.jlind.xyz/portfolio/view/catsopinion</loc>
+    <lastmod>2023-03-12</lastmod>
   </url>
   <url>
-    <loc>https://www.jlind.xyz/portfolio/view?id=2</loc>
-    <lastmod>2023-01-04</lastmod>
+    <loc>https://www.jlind.xyz/portfolio/view/catsadmin</loc>
+    <lastmod>2023-03-12</lastmod>
   </url>
   <url>
-    <loc>https://www.jlind.xyz/portfolio/view?id=3</loc>
-    <lastmod>2023-01-04</lastmod>
+    <loc>https://www.jlind.xyz/portfolio/view/catvision</loc>
+    <lastmod>2023-03-12</lastmod>
   </url>
   <url>
-    <loc>https://www.jlind.xyz/portfolio/view?id=4</loc>
-    <lastmod>2023-01-04</lastmod>
+    <loc>https://www.jlind.xyz/portfolio/view/unityraytracing</loc>
+    <lastmod>2023-03-12</lastmod>
   </url>
   <url>
-    <loc>https://www.jlind.xyz/portfolio/view?id=5</loc>
-    <lastmod>2023-01-04</lastmod>
+    <loc>https://www.jlind.xyz/portfolio/view/footkin</loc>
+    <lastmod>2023-03-12</lastmod>
   </url>
   <url>
-    <loc>https://www.jlind.xyz/portfolio/view?id=6</loc>
-    <lastmod>2023-01-04</lastmod>
+    <loc>https://www.jlind.xyz/portfolio/view/library</loc>
+    <lastmod>2023-03-12</lastmod>
   </url>
 </urlset>

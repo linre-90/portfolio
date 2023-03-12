@@ -1,25 +1,36 @@
-<div th:fragment="portfolioitem">
-    <div class="bg" id="view-bg"></div>
-    <div class="view-container">
-        <h1 class="header-font view-header" th:text="${item.name}"></h1>
-        <div>
-            <span th:each="tab : ${item.tags}" class="card-tag header-font" th:text="${tab}"></span>
-        </div>
-        <p class="view-text normal-font"><small>27.12.2022</small></p>
-        <p class="view-text normal-font">
-            <i class="view-text normal-font">
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Catvision is simulation mace with unity to showcase differences between human and cat vision.">
+    <meta name="keywords" content="Unity, C#, Firebase">
+    <title>Catvision</title>
+    <link rel="icon" href="/images/logo.webp" />
+    <link href="/common.css" rel="stylesheet" />
+    <link href="/pagelayout.css" rel="stylesheet" />
+    <link href="/view.css" rel="stylesheet" />
+</head>
+<body class="dark">
+    <div class="pagelayoutcontent">
+        <h1 class="view-header">Catvision</h1>
+        <p class="view-text"><small>27.12.2022</small></p>
+        <p class="view-text">
+            <i class="view-text">
                 Catvision is another interactive addition to the blog. It presents visual differences between the cat's POV and human POV.
             </i>
         </p>
-        <img class="view-image normal-font" th:src="${item.image}" alt="Overview of the game">
-        <p class="view-text normal-font" >
-            <i class="view-text normal-font">
+        <img class="view-image" src="/images/portfolio/catvision/catvision-thumbnail.webp" alt="Overview of the game">
+        <p class="view-text" >
+            <i class="view-text">
                 Overview of the game
             </i>
         </p>
         <!-- First Content section -->
-        <h2 class="header-font view-header">What is it?</h2>
-        <p class="view-text normal-font">
+        <h2 class="view-header">What is it?</h2>
+        <p class="view-text">
             Catvision presents and plays on the knowledge that cats see the world very differently.
             It is a simulation about how cats might see the world.
             Graphics and animations are not realistic, and they are clunky.
@@ -27,16 +38,16 @@
             Main focus was to get a somewhat realistic visible difference between, cat's and human visions.
             The simulation game is of course filled with cat knowledge.
         </p>
-        <img class="view-image normal-font" src="/images/portfolio/catvision/catvision-difference.webp" alt="Difference between cat and human view">
-        <p class="view-text normal-font" >
-            <i class="view-text normal-font">
+        <img class="view-image" src="/images/portfolio/catvision/catvision-difference.webp" alt="Difference between cat and human view">
+        <p class="view-text" >
+            <i class="view-text">
                 The whole point was to demonstrate differences between humans and cats and their points of view.
             </i>
         </p>
 
         <!-- Second Content section -->
-        <h2 class="header-font view-header">Goals and lifespan</h2>
-        <p class="view-text normal-font">
+        <h2 class="view-header">Goals and lifespan</h2>
+        <p class="view-text">
             I already had some prior experience with Unity game engine.
             Goal was not to learn new stuff (but that happened too),
             it was to make a simulation based on data and theories.
@@ -45,33 +56,35 @@
             that part of Unity, but it was pretty straight forward. Application is still available over
             <a target="_blank" href="https://catvision-68afa.web.app/">here</a>.
         </p>
-        <img class="view-image normal-font" src="/images/portfolio/catvision/catvision-nigth.webp" alt="Night time screenshot">
-        <p class="view-text normal-font" >
-            <i class="view-text normal-font">
+        <img class="view-image" src="/images/portfolio/catvision/catvision-nigth.webp" alt="Night time screenshot">
+        <p class="view-text" >
+            <i class="view-text">
                 Game or simulation supported also nigth time
             </i>
         </p>
 
         <!-- Third Content section -->
-        <h2 class="header-font view-header">Tech used</h2>
-        <p class="view-text normal-font">
+        <h2 class="view-header">Tech used</h2>
+        <p class="view-text">
             It was written in c# and Unity.
             There is no repository of the code because games are a bit different compared to some react projects.
             Application is hosted at Firebase.
             <br><br>
             Game can be found <a target="_blank" href="https://catvision-68afa.web.app/">here</a>, please do note that mobile browser are not supported and browser must support webgl 2.0.
         </p>
-        <img class="view-image normal-font" src="/images/portfolio/catvision/catvision-info.webp" alt="Info from collecting mouse">
-        <p class="view-text normal-font" >
-            <i class="view-text normal-font">
+        <img class="view-image" src="/images/portfolio/catvision/catvision-info.webp" alt="Info from collecting mouse">
+        <p class="view-text" >
+            <i class="view-text">
                 Game has multiple info messages about cats.
             </i>
         </p>
-        <img class="view-image normal-font" src="/images/portfolio/catvision/catvision-colordifference.webp" alt="Color difference">
-        <p class="view-text normal-font" >
-            <i class="view-text normal-font">
+        <img class="view-image" src="/images/portfolio/catvision/catvision-colordifference.webp" alt="Color difference">
+        <p class="view-text" >
+            <i class="view-text">
                 Color difference
             </i>
         </p>
     </div>
-</div>
+</body>
+</html>
+

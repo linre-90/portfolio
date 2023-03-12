@@ -1,0 +1,70 @@
+.cardContainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.cardBody{
+    padding: 1rem;
+    border: 1px solid var(--complimentary-color-one);
+    border-radius: .33rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardHeader{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-family: var(--header-font);
+}
+
+.cardImage{
+    width: 80%;
+    height: auto;
+}
+
+.cardText{
+    font-family: var(--common-font)
+}
+
+.cardTag{
+    /*background-color: var(--complimentary-color-one);*/
+    color: var(--base-text-color);
+    border-radius: .2rem;
+    border: 1px solid var(--complimentary-color-one);
+    font-size: .75rem;
+    padding: .2rem;
+    display: inline;
+    margin-right: .25rem;
+}
+
+.cardLink{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 33%;
+    display: block;
+    color: var(--active-theme-highlight);
+    border: 1px solid var(--active-theme-highlight);
+    border-radius: .2rem;
+    text-align: center;
+}
+
+.carLink:visited{
+    color: var(--base-text-color);
+}
+
+@media only screen and (min-width: 850px) {
+
+    .cardContainer{
+        justify-content: space-around;
+    }
+
+    .cardBody{
+        width: 320px;
+    }
+}
